@@ -1,5 +1,5 @@
-// pages/_app.js
-import '../styles/globals.css';  // Asegúrate de que el archivo CSS esté bien importado
+import '../styles/globals.css'; // Verifica que la ruta sea correcta
+
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;

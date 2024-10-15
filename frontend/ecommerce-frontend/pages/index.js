@@ -1,30 +1,29 @@
-import Navbar from '../components/Navbar';
-import axios from 'axios';
-import { useEffect, useState } from 'react';
-import ProductCard from '../components/ProductCard';
+// pages/index.js
 
 export default function Home() {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    const fetchProducts = async () => {
-      const { data } = await axios.get('/api/v1/products');
-      setProducts(data.products);
-    };
-    fetchProducts();
-  }, []);
-
   return (
-    <div>
-      <Navbar />
-      <div className="bg-blue-500 text-white p-4">
-  <h1 className="text-2xl font-bold">Welcome to the E-commerce Store</h1>
-</div>
-
-      <div className="product-list">
-        {products.map((product) => (
-          <ProductCard key={product._id} product={product} />
-        ))}
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+      <div className="text-center">
+        <h1 className="text-5xl font-bold mb-6 text-blue-600">
+          Welcome to the E-commerce Store
+        </h1>
+        <p className="text-gray-700 mb-4">
+          Discover amazing products at the best prices!
+        </p>
+        <div className="space-x-4">
+          <a
+            href="/products"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >
+            Browse Products
+          </a>
+          <a
+            href="/cart"
+            className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+          >
+            View Cart
+          </a>
+        </div>
       </div>
     </div>
   );
