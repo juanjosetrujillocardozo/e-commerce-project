@@ -1,7 +1,3 @@
-Aquí tienes los **README** con el formato Markdown correctamente implementado tanto para el **frontend** como para el **backend**:
-
----
-
 # E-commerce Project - Frontend
 
 ## Descripción
